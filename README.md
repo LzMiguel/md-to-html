@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Markdown to HTML Converter
 
-## Getting Started
+Um conversor de Markdown para HTML, ágil e prático, com pré-visualização em tempo real do código gerado e da página renderizada.
 
-First, run the development server:
+## 🚀 Sobre o Projeto
+
+Este projeto foi construído para facilitar a conversão das marcações de texto e entender imediatamente como elas se transformam estruturalmente e visualmente. Através de duas abas de visualização, você pode:
+
+- Ver o **código fonte HTML** em tempo real para utilizar direto em seu próprio sistema.
+- Inspecionar a **Renderização Final (HTML Page)** para garantir que ficará com a aparência certa na web.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **[Next.js 16](https://nextjs.org/)** com App Router
+- **[React 19](https://react.dev/)**
+- **[Tailwind CSS v4](https://tailwindcss.com/)**
+- **[Shadcn UI](https://ui.shadcn.com/)** / **Radix UI**
+
+## 📦 Como rodar localmente
+
+Primeiro, clone o repositório em sua máquina. Depois siga os passos de inicialização padrão:
+
+1. Instale as dependências com NPM:
+
+```bash
+npm install
+```
+
+1. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Acesse a aplicação na porta padrão: [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Como usar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Entre com seu código formato Markdown no campo da esquerda (`Markdown code`).
+2. Acesse a aba **HTML code** à direita para verificar a sintaxe HTML respectiva do conteúdo.
+3. Acesse a aba **HTML page** para ver o resultado do estilo final processado como uma tela web comum.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sinta-se à vontade para enviar PRs e melhorar o funcionamento do app!
