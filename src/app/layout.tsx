@@ -3,6 +3,9 @@ import { Geist, Geist_Mono, JetBrains_Mono } from 'next/font/google'
 import '@/app/globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import { ThemeProvider } from '@/components/theme-provider'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
 
 const jetbrainsMono = JetBrains_Mono({
@@ -21,8 +24,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Markdown to HTML Converter',
-  description: 'A simple tool to convert Markdown text to HTML format.',
+  title: 'md → html | Markdown to HTML Converter',
+  description:
+    'Converta Markdown para HTML em tempo real. Suporte a tabelas, checkboxes, wikilinks, toggles e mais. Arraste arquivos .md ou digite diretamente.',
 }
 
 export default function RootLayout({
@@ -32,20 +36,30 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
+      suppressHydrationWarning
       className={cn(
         'h-full',
         'antialiased',
         geistSans.variable,
         geistMono.variable,
-        'font-mono',
-        jetbrainsMono.variable,
+        jetbrainsMono.variable
       )}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
-        <Footer />
+      <body className="min-h-full flex flex-col font-mono">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <TooltipProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster position="bottom-right" richColors />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

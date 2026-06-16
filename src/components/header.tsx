@@ -1,9 +1,18 @@
+import { ThemeToggle } from '@/components/theme-toggle'
+import { CodeBlock } from '@phosphor-icons/react/dist/ssr'
+
 export default function Header() {
   return (
-    <header className="w-full bg-zinc-100 dark:bg-zinc-900 p-4">
-      <h1 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200">
-        Markdown to HTML Converter
-      </h1>
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
+      <div className="flex h-12 items-center justify-between px-4">
+        <div className="flex items-center gap-2.5">
+          <CodeBlock className="size-5 text-foreground" weight="duotone" />
+          <h1 className="text-sm font-semibold tracking-tight text-foreground">
+            md → html
+          </h1>
+        </div>
+        <ThemeToggle />
+      </div>
     </header>
   )
 }

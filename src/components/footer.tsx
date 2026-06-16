@@ -1,10 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="w-full h-16 flex items-center justify-center border-t mt-8">
-      <p className="text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Markdown to HTML Converter. All rights
-        reserved.
-      </p>
+    <footer className="w-full border-t border-border/40 bg-background/50">
+      <div className="flex h-8 items-center justify-center px-4">
+        <p className="text-[11px] text-muted-foreground/60">
+          md → html &middot; {new Date().getFullYear()}
+        </p>
+      </div>
     </footer>
   )
 }
